@@ -12,7 +12,7 @@ export default function AboutPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-              About WorkSpace Pro
+              About The HQ Desk
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
               We are on a mission to transform how professionals work by
@@ -31,7 +31,7 @@ export default function AboutPage() {
                   Our Story
                 </h2>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Founded in 2020, WorkSpace Pro began with a simple idea: work
+                  Founded in 2020, The HQ Desk began with a simple idea: work
                   should happen in spaces that inspire. What started as a single
                   shared office space has grown into a network of premium
                   workspaces across major cities.
@@ -43,7 +43,7 @@ export default function AboutPage() {
                   and environments designed for focus and creativity.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Today, we serve thousands of members who rely on WorkSpace Pro
+                  Today, we serve thousands of members who rely on The HQ Desk
                   for their daily productivity, important meetings, and
                   professional growth.
                 </p>
@@ -91,7 +91,7 @@ export default function AboutPage() {
               Our Values
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              These core principles guide everything we do at WorkSpace Pro.
+              These core principles guide everything we do at The HQ Desk.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
