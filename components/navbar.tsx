@@ -2,7 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Calendar, LogIn, UserPlus, Home, Grid } from "lucide-react";
+import {
+  Menu,
+  X,
+  Calendar,
+  LogIn,
+  UserPlus,
+  Home,
+  Grid,
+  Info,
+  CreditCard,
+} from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -19,7 +29,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <Grid className="h-8 w-8 text-primary" />
             <span className="text-xl font-bold text-foreground">
-              The HQ Desk
+              WorkSpace Pro
             </span>
           </Link>
 
@@ -46,6 +56,28 @@ export function Navbar() {
             >
               <Calendar className="h-4 w-4" />
               Book Now
+            </Link>
+            <Link
+              href="/pricing"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                isActive("/pricing")
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <CreditCard className="h-4 w-4" />
+              Pricing
+            </Link>
+            <Link
+              href="/about"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                isActive("/about")
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Info className="h-4 w-4" />
+              About
             </Link>
           </div>
 
@@ -113,6 +145,30 @@ export function Navbar() {
               >
                 <Calendar className="h-4 w-4" />
                 Book Now
+              </Link>
+              <Link
+                href="/pricing"
+                className={`flex items-center gap-2 px-2 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/pricing")
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <CreditCard className="h-4 w-4" />
+                Pricing
+              </Link>
+              <Link
+                href="/about"
+                className={`flex items-center gap-2 px-2 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/about")
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Info className="h-4 w-4" />
+                About
               </Link>
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button
