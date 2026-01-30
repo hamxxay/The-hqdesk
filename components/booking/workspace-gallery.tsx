@@ -1,10 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { MapPin, Users, Wifi, Coffee, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { useState } from "react";
+import Image from "next/image";
+import { MapPin, Users, Wifi, Coffee, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -12,8 +17,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
+} from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
 
 const workspaces = [
   {
@@ -24,7 +29,8 @@ const workspaces = [
     capacity: "1-2 people",
     price: 45,
     amenities: ["Standing desk", "High-speed WiFi", "Printing access"],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
     available: true,
   },
   {
@@ -35,7 +41,8 @@ const workspaces = [
     capacity: "Open seating",
     price: 25,
     amenities: ["Coffee bar", "Collaborative atmosphere", "Natural light"],
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop",
     available: true,
   },
   {
@@ -46,7 +53,8 @@ const workspaces = [
     capacity: "8-12 people",
     price: 75,
     amenities: ["Video conferencing", "Whiteboard", "Catering available"],
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop",
     available: true,
   },
   {
@@ -57,23 +65,26 @@ const workspaces = [
     capacity: "4-6 people",
     price: 85,
     amenities: ["24/7 access", "Kitchen", "Phone booths"],
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop",
-    available: false,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop",
+    available: true,
   },
-]
+];
 
 export function WorkspaceGallery() {
-  const [selectedWorkspace, setSelectedWorkspace] = useState<typeof workspaces[0] | null>(null)
-  const [bookingConfirmed, setBookingConfirmed] = useState(false)
+  const [selectedWorkspace, setSelectedWorkspace] = useState<
+    (typeof workspaces)[0] | null
+  >(null);
+  const [bookingConfirmed, setBookingConfirmed] = useState(false);
 
-  const handleBookNow = (workspace: typeof workspaces[0]) => {
-    setSelectedWorkspace(workspace)
-    setBookingConfirmed(false)
-  }
+  const handleBookNow = (workspace: (typeof workspaces)[0]) => {
+    setSelectedWorkspace(workspace);
+    setBookingConfirmed(false);
+  };
 
   const confirmBooking = () => {
-    setBookingConfirmed(true)
-  }
+    setBookingConfirmed(true);
+  };
 
   return (
     <>
@@ -140,7 +151,9 @@ export function WorkspaceGallery() {
             <CardFooter className="p-4 pt-0 flex items-center justify-between">
               <p className="text-lg font-bold text-foreground">
                 ${workspace.price}
-                <span className="text-sm font-normal text-muted-foreground">/day</span>
+                <span className="text-sm font-normal text-muted-foreground">
+                  /day
+                </span>
               </p>
               <Button
                 onClick={() => handleBookNow(workspace)}
@@ -159,12 +172,17 @@ export function WorkspaceGallery() {
       </div>
 
       {/* Booking Dialog */}
-      <Dialog open={!!selectedWorkspace} onOpenChange={() => setSelectedWorkspace(null)}>
+      <Dialog
+        open={!!selectedWorkspace}
+        onOpenChange={() => setSelectedWorkspace(null)}
+      >
         <DialogContent className="sm:max-w-md">
           {!bookingConfirmed ? (
             <>
               <DialogHeader>
-                <DialogTitle className="text-foreground">Confirm Booking</DialogTitle>
+                <DialogTitle className="text-foreground">
+                  Confirm Booking
+                </DialogTitle>
                 <DialogDescription>
                   You are about to book the following workspace:
                 </DialogDescription>
@@ -180,7 +198,9 @@ export function WorkspaceGallery() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">{selectedWorkspace.name}</h4>
+                    <h4 className="font-semibold text-foreground">
+                      {selectedWorkspace.name}
+                    </h4>
                     <p className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
                       <MapPin className="h-4 w-4" />
                       {selectedWorkspace.location}
@@ -192,10 +212,17 @@ export function WorkspaceGallery() {
                 </div>
               )}
               <DialogFooter className="flex gap-2">
-                <Button variant="outline" onClick={() => setSelectedWorkspace(null)} className="text-foreground border-foreground">
+                <Button
+                  variant="outline"
+                  onClick={() => setSelectedWorkspace(null)}
+                  className="text-foreground border-foreground"
+                >
                   Cancel
                 </Button>
-                <Button onClick={confirmBooking} className="bg-primary hover:bg-secondary text-primary-foreground">
+                <Button
+                  onClick={confirmBooking}
+                  className="bg-primary hover:bg-secondary text-primary-foreground"
+                >
                   Confirm Booking
                 </Button>
               </DialogFooter>
@@ -216,11 +243,15 @@ export function WorkspaceGallery() {
                   <Check className="h-8 w-8 text-primary" />
                 </div>
                 <p className="text-muted-foreground">
-                  Workspace booked successfully! You will receive a confirmation email shortly.
+                  Workspace booked successfully! You will receive a confirmation
+                  email shortly.
                 </p>
               </div>
               <DialogFooter>
-                <Button onClick={() => setSelectedWorkspace(null)} className="w-full bg-primary hover:bg-secondary text-primary-foreground">
+                <Button
+                  onClick={() => setSelectedWorkspace(null)}
+                  className="w-full bg-primary hover:bg-secondary text-primary-foreground"
+                >
                   Done
                 </Button>
               </DialogFooter>
@@ -229,5 +260,5 @@ export function WorkspaceGallery() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }
