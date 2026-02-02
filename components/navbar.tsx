@@ -68,6 +68,17 @@ export function Navbar() {
             >
               <CreditCard className="h-4 w-4" />
               Pricing
+              <Link
+                href="/gallery"
+                className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                  isActive("/gallery")
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <Album className="h-4 w-4" />
+                Gallery
+              </Link>
             </Link>
             <Link
               href="/about"
@@ -79,17 +90,6 @@ export function Navbar() {
             >
               <Info className="h-4 w-4" />
               About
-            </Link>
-            <Link
-              href="/gallery"
-              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                isActive("/gallery")
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <Album className="h-4 w-4" />
-              Gallery
             </Link>
           </div>
 
