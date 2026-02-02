@@ -12,6 +12,7 @@ import {
   Grid,
   Info,
   CreditCard,
+  Album,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -78,6 +79,17 @@ export function Navbar() {
             >
               <Info className="h-4 w-4" />
               About
+            </Link>
+            <Link
+              href="/gallery"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                isActive("/gallery")
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Album className="h-4 w-4" />
+              Gallery
             </Link>
           </div>
 

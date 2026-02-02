@@ -69,6 +69,30 @@ const workspaces = [
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop",
     available: true,
   },
+  {
+    id: 5,
+    name: "Creative Co-Working Area",
+    type: "Co-Working Space",
+    location: "Arts and Culture Center",
+    capacity: "Open seating",
+    price: 30,
+    amenities: ["Event space", "Workshops", "Community events"],
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
+    available: false,
+  },
+  {
+    id: 6,
+    name: "Spacious Conference Room",
+    type: "Meeting Room",
+    location: "Business District",
+    capacity: "15-20 people",
+    price: 95,
+    amenities: ["Projector", "Conference phone", "Refreshments"],
+    image:
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=300&fit=crop",
+    available: true,
+  },
 ];
 
 export function WorkspaceGallery() {

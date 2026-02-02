@@ -11,7 +11,7 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       {/* <AboutSection /> */}
       <Footer />
     </main>

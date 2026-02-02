@@ -196,15 +196,15 @@ export default function PricingPage() {
                   answer:
                     "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.",
                 },
-                {
-                  question: "Is there a free trial available?",
-                  answer:
-                    "Yes! The Premium plan includes a 7-day free trial so you can experience all the benefits before committing.",
-                },
+                // {
+                //   question: "Is there a free trial available?",
+                //   answer:
+                //     "Yes! The Premium plan includes a 7-day free trial so you can experience all the benefits before committing.",
+                // },
                 {
                   question: "Are there any long-term commitments?",
                   answer:
-                    "No, all our plans are month-to-month with no long-term contracts. You can cancel anytime.",
+                    "Yes, all our plans are month-to-month with long-term contracts. You can cancel anytime.",
                 },
                 {
                   question: "Can I bring guests to the workspace?",
@@ -248,7 +248,7 @@ export default function PricingPage() {
                 asChild
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >
+              >   
                 <Link href="/booking">Book a Tour</Link>
               </Button>
               <Button
