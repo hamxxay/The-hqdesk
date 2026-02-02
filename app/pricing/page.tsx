@@ -182,6 +182,11 @@ export default function PricingPage() {
             ))}
           </div>
         </section>
+        <div className="flex justify-center">
+          <Button>
+            <Link href="/contact">Contact Us for Custom Plans</Link>
+          </Button>
+        </div>
 
         {/* FAQ Section */}
         <section className="bg-muted/30 py-16">
@@ -248,7 +253,7 @@ export default function PricingPage() {
                 asChild
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >   
+              >
                 <Link href="/booking">Book a Tour</Link>
               </Button>
               <Button
