@@ -12,6 +12,7 @@ import {
   Grid,
   Info,
   CreditCard,
+  Album,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
@@ -26,6 +27,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Grid className="h-8 w-8 text-primary" />
             <span className="text-xl font-bold text-foreground">
@@ -34,7 +36,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-7">
             <Link
               href="/"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
@@ -46,6 +48,7 @@ export function Navbar() {
               <Home className="h-4 w-4" />
               Home
             </Link>
+
             <Link
               href="/booking"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
@@ -57,6 +60,7 @@ export function Navbar() {
               <Calendar className="h-4 w-4" />
               Book Now
             </Link>
+
             <Link
               href="/pricing"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
@@ -68,6 +72,19 @@ export function Navbar() {
               <CreditCard className="h-4 w-4" />
               Pricing
             </Link>
+
+            <Link
+              href="/gallery"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                isActive("/gallery")
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Album className="h-4 w-4" />
+              Gallery
+            </Link>
+
             <Link
               href="/about"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
@@ -93,6 +110,7 @@ export function Navbar() {
                 Login
               </Link>
             </Button>
+
             <Button
               asChild
               className="bg-primary hover:bg-secondary text-primary-foreground"
@@ -121,56 +139,30 @@ export function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
-              <Link
-                href="/"
-                className={`flex items-center gap-2 px-2 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive("/")
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Home className="h-4 w-4" />
-                Home
-              </Link>
-              <Link
-                href="/booking"
-                className={`flex items-center gap-2 px-2 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive("/booking")
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Calendar className="h-4 w-4" />
-                Book Now
-              </Link>
-              <Link
-                href="/pricing"
-                className={`flex items-center gap-2 px-2 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive("/pricing")
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <CreditCard className="h-4 w-4" />
-                Pricing
-              </Link>
-              <Link
-                href="/about"
-                className={`flex items-center gap-2 px-2 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive("/about")
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Info className="h-4 w-4" />
-                About
-              </Link>
-              <div className="flex flex-col gap-2 pt-4 border-t border-border">
+            <div className="flex flex-col gap-2">
+              {[
+                { href: "/", label: "Home", icon: Home },
+                { href: "/booking", label: "Book Now", icon: Calendar },
+                { href: "/pricing", label: "Pricing", icon: CreditCard },
+                { href: "/gallery", label: "Gallery", icon: Album },
+                { href: "/about", label: "About", icon: Info },
+              ].map(({ href, label, icon: Icon }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    isActive(href)
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  <Icon className="h-4 w-4" />
+                  {label}
+                </Link>
+              ))}
+
+              <div className="pt-4 mt-2 border-t border-border flex flex-col gap-2">
                 <Button
                   variant="outline"
                   asChild
@@ -181,6 +173,7 @@ export function Navbar() {
                     Login
                   </Link>
                 </Button>
+
                 <Button
                   asChild
                   className="w-full bg-primary hover:bg-secondary text-primary-foreground"
