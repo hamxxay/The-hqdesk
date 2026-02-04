@@ -13,6 +13,7 @@ import {
   Info,
   CreditCard,
   Album,
+  UserCircle,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
@@ -125,7 +126,7 @@ export function Navbar() {
               className="bg-primary hover:bg-secondary text-primary-foreground"
             >
               <Link href="/login" className="flex items-center gap-2">
-                <UserPlus className="h-4 w-4" />
+                <UserCircle className="h-4 w-4" />
                 Members Portal
               </Link>
             </Button>
@@ -190,6 +191,15 @@ export function Navbar() {
                   <Link href="/signup" onClick={() => setIsMenuOpen(false)}>
                     <UserPlus className="h-4 w-4 mr-2" />
                     Sign Up
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-secondary text-primary-foreground"
+                >
+                  <Link href="/login" onClick={() => setIsMenuOpen(false)}>
+                    <UserCircle className="h-4 w-4 mr-2" />
+                    Members Portal
                   </Link>
                 </Button>
               </div>
