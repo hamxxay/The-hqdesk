@@ -9,6 +9,7 @@ import MainHeroImage from "../components/home/MainHeroImage";
 import Canvas from "../components/home/Canvas";
 import { Navbar } from "../components/navbar";
 import LazyShow from "../components/home/LazyShow";
+import WhatsAppButton from "../components/ui/whataspp-button";
 
 export default function HomePage() {
   return (
@@ -35,6 +36,13 @@ export default function HomePage() {
       <StatsSection />
       {/* <AboutSection /> */}
       <Footer />
+      <>
+        {/* Your website content */}
+        <WhatsAppButton
+          phoneNumber="923001234567"
+          message="Hi! I'm interested in your services."
+        />
+      </>
     </main>
   );
 }

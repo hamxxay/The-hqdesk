@@ -20,6 +20,10 @@
     {
       "name": "About",
       "href": "about"
+    },
+    {
+      "name": "Contact",
+      "href": "contact"
     }
   ],
   "callToAction": {
@@ -33,11 +37,11 @@
     "img": "/assets/images/happyTeam.jpg",
     "primaryAction": {
       "text": "Book Now",
-      "href": "#"
+      "href": "/booking"
     },
     "secondaryAction": {
       "text": "Contact us",
-      "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
+      "href": "contact"
     }
   },
   "product": {
