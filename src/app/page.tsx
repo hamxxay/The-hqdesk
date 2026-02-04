@@ -39,7 +39,7 @@ export default function HomePage() {
       <>
         {/* Your website content */}
         <WhatsAppButton
-          phoneNumber="923001234567"
+          phoneNumber="923160577702"
           message="Hi! I'm interested in your services."
         />
       </>
