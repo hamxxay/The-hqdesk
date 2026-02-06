@@ -34,7 +34,7 @@ export default function LoginPage() {
     // Simulate login - in production, this would be a real API call
     setTimeout(() => {
       setIsLoading(false);
-      setMessage("Login successful! Welcome back to The HQ Desk.");
+      setMessage("Login successful! Welcome back to WorkNest.");
       setTimeout(() => {
         router.push("/booking");
       }, 1500);
@@ -50,9 +50,7 @@ export default function LoginPage() {
             className="flex items-center justify-center gap-2 mb-4"
           >
             <Grid className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">
-              The HQ Desk
-            </span>
+            <span className="text-xl font-bold text-foreground">WorkNest</span>
           </Link>
           <CardTitle className="text-2xl font-bold text-foreground">
             Welcome Back

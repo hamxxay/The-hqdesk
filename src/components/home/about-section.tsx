@@ -7,9 +7,9 @@ export function AboutSection() {
             About
           </h2>
           <p className="text-lg text-secondary leading-relaxed">
-            The HQ Desk connects professionals with premium shared office
-            spaces. Our platform offers real-time availability, instant booking,
-            and access to top-tier amenities in prime locations.
+            WorkNest connects professionals with premium shared office spaces.
+            Our platform offers real-time availability, instant booking, and
+            access to top-tier amenities in prime locations.
           </p>
         </div>
       </div>

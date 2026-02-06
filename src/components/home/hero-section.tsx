@@ -42,7 +42,7 @@ export function HeroSection() {
     //   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     //     <div className="text-center max-w-3xl mx-auto pb-16 md:pb-24">
     //       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-    //         The HQ Desk
+    //         WorkNest
     //       </h1>
     //       <p className="text-lg md:text-xl text-secondary leading-relaxed mb-8 text-pretty">
     //         Discover and book premium workspaces in shared office environments.

@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The HQ Desk - Premium Workspace Booking Platform",
+  title: "WorkNest - Premium Workspace Booking Platform",
   description:
     "Discover and book premium workspaces in shared office environments. Find your perfect workspace with real-time availability and instant booking.",
   generator: "v0.app",

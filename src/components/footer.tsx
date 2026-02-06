@@ -10,7 +10,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Grid className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold">The HQ Desk</span>
+              <span className="text-xl font-bold">WorkNest</span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed">
               Premium workspace booking platform connecting professionals with
@@ -74,7 +74,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-background/70 text-sm">
                 <Mail className="h-4 w-4 text-primary" />
-                hello@thehqdesk.com
+                hello@worknest.com
               </li>
               <li className="flex items-center gap-2 text-background/70 text-sm">
                 <Phone className="h-4 w-4 text-primary" />
@@ -90,7 +90,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-background/20 text-center">
           <p className="text-background/60 text-sm">
-            &copy; {new Date().getFullYear()} The HQ Desk. All rights reserved.
+            &copy; {new Date().getFullYear()} WorkNest. All rights reserved.
           </p>
         </div>
       </div>

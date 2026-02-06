@@ -1,4 +1,3 @@
-// import { Navbar } from "../components/navbar";
 "use client";
 import { Footer } from "../components/footer";
 import { HeroSection } from "../components/home/hero-section";
@@ -37,7 +36,6 @@ export default function HomePage() {
       {/* <AboutSection /> */}
       <Footer />
       <>
-        {/* Your website content */}
         <WhatsAppButton
           phoneNumber="923160577702"
           message="Hi! I'm interested in your services."

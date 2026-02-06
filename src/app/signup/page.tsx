@@ -75,9 +75,7 @@ export default function SignupPage() {
             className="flex items-center justify-center gap-2 mb-4"
           >
             <Grid className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">
-              The HQ Desk
-            </span>
+            <span className="text-xl font-bold text-foreground">WorkNest</span>
           </Link>
           <CardTitle className="text-2xl font-bold text-foreground">
             Create Account
