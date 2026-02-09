@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "WorkNest - Premium Workspace Booking Platform",
   description:
     "Discover and book premium workspaces in shared office environments. Find your perfect workspace with real-time availability and instant booking.",
-  generator: "v0.app",
+
   icons: {
     icon: [
       {

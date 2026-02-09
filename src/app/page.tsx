@@ -32,7 +32,7 @@ export default function HomePage() {
         </>
       </LazyShow>
 
-      <StatsSection />
+      {/* <StatsSection /> */}
       {/* <AboutSection /> */}
       <Footer />
       <>
