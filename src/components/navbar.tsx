@@ -119,15 +119,16 @@ export function Navbar() {
                 Sign Up
               </Link>
             </Button>
-            <Button
-              asChild
-              className="bg-primary hover:bg-secondary text-primary-foreground"
-            >
-              <Link href="/login" className="flex items-center gap-2">
-                <UserCircle className="h-4 w-4" />
-                Members Portal
-              </Link>
-            </Button>
+           <Button
+  variant="outline"
+  asChild
+  className="text-foreground border-foreground hover:bg-foreground hover:text-background bg-transparent"
+>
+  <Link href="/login" className="flex items-center gap-2">
+    <UserCircle className="h-4 w-4" />
+    Members Portal
+  </Link>
+</Button>
           </div>
 
           {/* Mobile Menu Button */}
