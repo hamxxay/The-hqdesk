@@ -9,6 +9,8 @@ import Canvas from "../components/home/Canvas";
 import { Navbar } from "../components/navbar";
 import LazyShow from "../components/home/LazyShow";
 import WhatsAppButton from "../components/ui/whataspp-button";
+import { GalleryPreview } from "../components/home/gallery-preview";
+import { PricingPreview } from "../components/home/pricing-preview";
 
 export default function HomePage() {
   return (
@@ -31,6 +33,8 @@ export default function HomePage() {
           <Canvas />
         </>
       </LazyShow>
+      <GalleryPreview />
+      <PricingPreview />
 
       {/* <StatsSection /> */}
       {/* <AboutSection /> */}

@@ -99,7 +99,7 @@ export function Navbar() {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button
+            {/* <Button
               variant="outline"
               asChild
               className="text-foreground border-foreground hover:bg-foreground hover:text-background bg-transparent"
@@ -108,7 +108,7 @@ export function Navbar() {
                 <LogIn className="h-4 w-4" />
                 Login
               </Link>
-            </Button>
+            </Button> */}
 
             <Button
               asChild
@@ -116,7 +116,7 @@ export function Navbar() {
             >
               <Link href="/signup" className="flex items-center gap-2">
                 <UserPlus className="h-4 w-4" />
-                Sign Up
+                Register Now
               </Link>
             </Button>
            <Button
