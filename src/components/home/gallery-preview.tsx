@@ -29,7 +29,7 @@ export function GalleryPreview() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-semibold text-primary">Gallery</p>
+            {/* <p className="text-sm font-semibold text-primary">Gallery</p> */}
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               A quick look at the spaces
             </h2>
