@@ -9,10 +9,13 @@ const useResponsiveSize = () => {
     setHeight(window.innerHeight);
   }, [setWidth, setHeight]);
 
-  useEffect(() => {
-    window.addEventListener('resize', setSizes);
-    setSizes();
-  }, [setSizes]);
+// src/hooks/useResponsiveSize.ts (lines 12-17)
+useEffect(() => {
+  window.addEventListener('resize', setSizes);
+  setSizes();
+  return () => window.removeEventListener('resize', setSizes);  // Add this line
+}, [setSizes]);
+
 
   return { width, height };
 };

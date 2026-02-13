@@ -2,8 +2,7 @@
 import { Footer } from "../components/footer";
 import { HeroSection } from "../components/home/hero-section";
 import { FeaturesSection } from "../components/home/features-section";
-import { StatsSection } from "../components/home/stats-section";
-import { AboutSection } from "../components/home/about-section";
+
 import MainHeroImage from "../components/home/MainHeroImage";
 import Canvas from "../components/home/Canvas";
 import { Navbar } from "../components/navbar";
